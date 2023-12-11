@@ -15,7 +15,9 @@ const MONGODB_URI = "mongodb+srv://lokeshsamudrala7288:Lokesh7288@final-project.
 
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:["http://localhost:5000","https://pbudget-b.onrender.com"],
+}));
 app.use(compression());
 
 mongoose.connect(MONGODB_URI);
